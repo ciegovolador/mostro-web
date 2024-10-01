@@ -1,0 +1,1 @@
+export const MOSTRO_PUB_KEY='npub19m9laul6k463czdacwx5ta4ap43nlf3lr0p99mqugnz8mdz7wtvskkm5wg' // Local

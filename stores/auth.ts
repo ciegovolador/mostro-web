@@ -54,6 +54,7 @@ export const useAuth = defineStore('auth', {
       if (decryptedPrivKey.value) {
         try {
           this.privKey = decryptedPrivKey.value
+          // @ts-ignore
           this.pubKey = getPublicKey(this.privKey)
           this.authMethod = AuthMethod.LOCAL
         } catch(err) {
@@ -79,6 +80,7 @@ export const useAuth = defineStore('auth', {
         } else {
           this.privKey = privateKey
         }
+        // @ts-ignore
         this.pubKey = getPublicKey(this.privKey)
       } else if (this.authMethod === AuthMethod.NIP07) {
         const extensionLoginPayload = loginPayload as ExtensionLoginPayload
