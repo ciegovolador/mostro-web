@@ -12,7 +12,7 @@ export default function useNip19 () {
   const nsecToHex = (nsec: string) : string => {
     return nip19.decode(nsec).data as string
   }
-  const hexToNsec = (hex: string) : string => {
+  const hexToNsec = (hex: Uint8Array) : string => {
     return nip19.nsecEncode(hex)
   }
 
